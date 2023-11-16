@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set the body height to 100% of the viewport height */
+}
+
+.container {
+    border: red solid 2px;
+    border-radius: 5%;
+    height: 600px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    padding-bottom: 0px;;
+}
+
+.screen{
+    /* margin: 5px; */
+    height: 22%;
+    width: 435px;
+    border: red solid 2px;
+    border-radius: 25px;
+}
+
+.inputs{
+    border: solid 2px red;
+    height: 80%;
+    margin-top: 5px;
+    width: 435px;
+    border-radius: 25px;
+    margin-bottom: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.row input {
+    width: 25%;
+    font-size: 2.5rem;
+    background-color: #232931;
+    color: #4ECCA3;
+    border: none;
+    flex-grow: 1;
+    border-radius: 40px;
+    padding: 15px;
+}
+
+input:hover{
+    background-color: rgb(64, 78, 91);
+    
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
+}
