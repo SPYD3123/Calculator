@@ -19,10 +19,12 @@ function evaluate(list){
     else if (list[1]=='/') {
         list2.push((Number(list[0]) / Number(list[2])).toString())
     }
+    else if (list[1]=='%' && list[2]=='') {
+        list2.push((Number(list[0])/100).toString())
+    }
     else if (list[1]=='%') {
         list2.push(((Number(list[0])/100) * Number(list[2])).toString())
     }
-
     if (list.length==3) {
         return list2;
     }
@@ -153,12 +155,25 @@ if (element.value=='=') {
             //     answer=[]
             // }
             else{
-                if (answer.length==2) {
+                if (answer.length==2 && answer[1]=='%') {
+                    answer.push(clickedValues)
+                    // console.log(answer)
+                    clickedValues='';
+                    console.log(answer)
+                    answer=evaluate(answer)
+                    console.log(answer)
+                    copy=[answer[0]]
+                    screen.textContent=answer.join('')+clickedValues;
+                    clickedValues=''
+                    answer=[]
+                }
+                else if (answer.length==2) {
                     screen.textContent=answer[0]
                     copy=[answer[0]]
                     answer=[]
                     clickedValues=[]
                 }
+
                 else{
                     if (copy.length==0) {
                         copy[0]=clickedValues;
