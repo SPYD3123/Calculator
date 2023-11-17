@@ -79,10 +79,8 @@ if (element.value=='⌫') {
                 // alert('must add a number before any operator')
                 // screen.textContent='0'
                 if (copy==[]) {
-                    screen.textContent='0'
+                    screen.textContent='0';
                 }
-
-                
             }
             else if (element.value!='AC' && element.value!='=' && element.value!='⌫') {
                 copy=[]
