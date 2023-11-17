@@ -9,31 +9,36 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh; /* Set the body height to 100% of the viewport height */
+    background-color:#2f3439;
 }
 
 .container {
-    border: red solid 2px;
+    background-color: #000000;
+    /* border: red solid 2px; */
     border-radius: 5%;
-    height: 600px;
-    width: 450px;
+    height: 620px;
+    width: 470px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     padding: 5px;
-    padding-bottom: 0px;;
+    padding-left: 5px;
+    padding-top: 15px;
+    padding-bottom: 0px;
 }
 
 .screen{
     /* margin: 5px; */
-    height: 22%;
+    height: 15%;
     width: 435px;
-    border: red solid 2px;
+    /* border: red solid 2px; */
     border-radius: 25px;
 }
 
 .inputs{
-    border: solid 2px red;
-    height: 80%;
+    /* border: solid 2px red; */
+    height: 85%;
     margin-top: 5px;
     width: 435px;
     border-radius: 25px;
@@ -46,7 +51,7 @@ body {
 .row input {
     width: 25%;
     font-size: 2.5rem;
-    background-color: #232931;
+    background-color: #45494d;
     color: #4ECCA3;
     border: none;
     flex-grow: 1;
@@ -64,3 +69,22 @@ input:hover{
     justify-content: space-evenly;
     gap: 5px;
 }
+
+.screen {
+    height: 15%;
+    width: 435px;
+    /* border: red solid 2px; */
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Disable vertical scrolling */
+    background-color: #232931;
+    color: #4ECCA3;
+    font-size: 2rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
