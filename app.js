@@ -77,7 +77,10 @@ if (element.value=='⌫') {
         if (clickedValues=='') {
             if (isNaN(element.value) && element.value!='.' && element.value!='AC' && element.value!='=' && element.value!='⌫') {
                 // alert('must add a number before any operator')
-                screen.textContent='0'
+                // screen.textContent='0'
+                if (copy==[]) {
+                    screen.textContent='0'
+                }
 
                 
             }
