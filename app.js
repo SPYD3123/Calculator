@@ -77,7 +77,8 @@ if (element.value=='⌫') {
         if (clickedValues=='') {
             if (isNaN(element.value) && element.value!='.' && element.value!='AC' && element.value!='=' && element.value!='⌫') {
                 // alert('must add a number before any operator')
-                
+                screen.textContent='0'
+
                 
             }
             else if (element.value!='AC' && element.value!='=' && element.value!='⌫') {
@@ -128,6 +129,7 @@ if (element.value=='=') {
                 // console.log(evaluate(answer))
                 answer=evaluate(answer)
                 console.log(answer)
+                copy=[answer[0]]
                 screen.textContent=answer.join('')+clickedValues;
                 clickedValues=''
                 answer=[]
@@ -150,16 +152,23 @@ if (element.value=='=') {
             //     answer=[]
             // }
             else{
-                
-                if (copy.length==0) {
-                    copy[0]=clickedValues;
+                if (answer.length==2) {
+                    screen.textContent=answer[0]
+                    copy=[answer[0]]
+                    answer=[]
+                    clickedValues=[]
                 }
-                answer=evaluate(copy)
-                console.log(copy)
-                // clickedValues=''
-                screen.textContent=copy.join('');
-                clickedValues=''
-                answer=[]
+                else{
+                    if (copy.length==0) {
+                        copy[0]=clickedValues;
+                    }
+                    answer=evaluate(copy)
+                    console.log(copy)
+                    // clickedValues=''
+                    screen.textContent=copy.join('');
+                    clickedValues=''
+                    answer=[]
+                }
             }
         }
     });
